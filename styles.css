@@ -1,0 +1,885 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+h1,
+h3 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 2rem;
+
+}
+
+p {
+  font-size: 1rem;
+}
+
+.List {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 1rem;
+
+}
+
+
+/* -------------------- Wrapper Utility Class -------------------- */
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1280px;
+  /* Specific max-width */
+  max-width: 100%;
+  /* Ensures it doesn't overflow on smaller screens */
+  margin: 0 auto;
+  /* Centers the wrapper horizontally */
+  height: auto;
+}
+
+/* -------------------- Header Section -------------------- */
+
+header {
+  display: flex;
+  position: absolute;
+  /* Absolute positioning relative to body/viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  /* Centers the header horizontally */
+  max-width: 100%;
+  height: auto;
+  /* 10% of viewport height */
+  justify-content: space-around;
+  /* Distributes space around items */
+  align-items: center;
+  /* Vertically aligns items */
+  padding: 0.5rem 5rem;
+  /* Vertical and horizontal padding */
+  background: linear-gradient(to bottom,
+      rgba(1, 22, 20, 1) 0%,
+      rgba(1, 22, 20, 0.75) 25%,
+      rgba(1, 22, 20, 0.5) 50%,
+      rgba(1, 22, 20, 0.25) 75%,
+      rgba(1, 22, 20, 0) 100%);
+  /* Gradient background */
+  color: #fff;
+  /* White text color */
+  z-index: 100;
+  /* High z-index to stay on top */
+  padding: 10px 20px;
+}
+
+
+
+/* Logo image inside header */
+.logo img {
+  display: flex;
+  flex-direction: row;
+  /* Flex for inner content */
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  z-index: 5;
+}
+
+
+#menu {
+  visibility: hidden;
+  display: block;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+
+}
+
+
+/* Header specific wrapper adjustment */
+header .wrapper {
+  /* The original had margin: 10rem auto; which seems too large for a header wrapper.
+      * This might have been an error or for a specific context not clear here.
+      * Removing it for now or adjust based on actual layout needs.
+      * For a header, the wrapper usually fits within the header's own padding.
+      */
+  margin: 0 auto;
+  /* Ensures centering within the header's own flow */
+  justify-content: space-between;
+  /* To keep logo and nav separate */
+  align-items: center;
+}
+
+
+/* -------------------- Navigation -------------------- */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  padding:1rem 0;
+}
+
+nav ul {
+  list-style: none;
+  /* Removes bullet points */
+  display: flex;
+  /* Flexbox for horizontal list items */
+  gap: 20px;
+  /* Space between list items */
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+nav ul li {
+  position: relative;
+  /* For dropdown positioning */
+  display: inline-block;
+}
+
+nav ul li a {
+  display: inline-block;
+  /* Makes the whole area clickable */
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit;
+  /* Inherits color from parent (white from header) */
+  text-decoration: none;
+  /* Removes underline */
+  text-align: center;
+  border: 1px solid transparent;
+  /* Transparent border for hover effect */
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  /* Smooth transition for hover effects */
+}
+
+nav ul li a:hover {
+  background: white;
+  color: black;
+  border-radius: 0.25rem;
+}
+
+/* Special styling for 'Connect' button */
+#Connect {
+  background: #025c5c;
+  color: white;
+}
+
+#Connect:hover {
+  background: #014444;
+  color: white;
+}
+
+/* Dropdown menu styles */
+nav ul li ul {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  /* Positions below the parent link */
+  left: 0;
+  list-style: none;
+  background: rgba(255, 255, 255, 1);
+  /* White background */
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+  /* Higher z-index for dropdown */
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  /* Rounded corners */
+}
+
+nav ul li:hover ul {
+  display: block;
+  /* Shows dropdown on hover */
+}
+
+nav ul li ul li {
+  white-space: nowrap;
+  /* Prevents wrapping of dropdown items */
+}
+
+nav ul li ul li a {
+  display: block;
+  /* Makes dropdown links fill their container */
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  color: #0D0D1A;
+  /* Dark text color */
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+}
+
+nav ul li ul li a:hover {
+  color: teal;
+  /* Teal color on hover for dropdown links */
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+#menu {
+  width: 30px;
+  height: auto;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* -------------------- Main Section (General) --------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 2rem 4rem;
+  /* Default padding for sections */
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* -------------------- Hero Section -------------------- */
+#Hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+
+
+  /* background-image: url('Drive-BG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+
+
+}
+
+
+#Hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* width: auto;
+  height: auto; */
+  z-index: 0;
+  object-fit: cover;
+}
+
+
+#Hero .List {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+
+}
+
+
+#Hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.637);
+  /* Dark semi-transparent overlay */
+  z-index: 1;
+}
+
+#Hero .List h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 800;
+  z-index: 1;
+  position: relative;
+}
+
+#Hero .List H2 {
+  display: inline-block;
+  background: none;
+  z-index: 10;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  border: none;
+  font-weight: 800;
+  text-align: center;
+  width: 80%;
+  /* Responsive width */
+  justify-self: auto;
+  align-self: auto;
+  margin: 0 auto;
+}
+
+#Hero .List H3 {
+  display: inline-block;
+  background: rgba(1, 70, 59, 0.445);
+  z-index: 10;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  border: 2px solid white;
+  font-weight: 800;
+  text-align: center;
+  width: 60%;
+  /* Responsive width */
+  min-width: 300px;
+  /* Minimum width */
+  justify-self: auto;
+  align-self: auto;
+  margin: 0 auto;
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+
+
+#Hero .List h3 a {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: yellow;
+  z-index: 1;
+  position: relative;
+  text-decoration: underline;
+}
+
+
+/* -------------------- Intro Section -------------------- */
+.intro {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  color: black;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  width: 100%;
+  /* Original fixed min-width - will address in media queries */
+}
+
+#intro {
+  background: #ffffff;
+}
+
+#intro p {
+  text-align: left;
+}
+
+
+.fade-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Read more button in About section */
+#intro .List h4 span {
+  display: block;
+  background-color: rgb(0, 128, 128);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  margin: 0 auto;
+  /* Centers the block-level span */
+  text-align: center;
+  width: fit-content;
+  /* Makes it only as wide as its content */
+}
+
+#intro .List h4 span a {
+  text-decoration: none;
+  color: white;
+}
+
+#intro .List h4 span:hover {
+  background: rgb(0, 102, 102);
+}
+
+
+/* -------------------- Area Section -------------------- */
+.Areas {
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 2rem;
+  padding: 4rem;
+}
+
+.Areas .List,
+.Areas .top,
+.Areas .bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centers items horizontally */
+  align-items: center;
+  /* Centers items vertically */
+  gap: 4rem;
+  /* Space between items */
+  text-align: center;
+  width: 100%;
+}
+
+#Projects .names {
+  width: 480px;
+  min-width: 320px;
+}
+
+
+#Drive-Team .names {
+  width: 500px;
+  /* Fixed width - will be responsive */
+  height: 700px;
+  min-width: 300px;
+}
+
+.Areas .names img {
+  width: 100px;
+  height: auto;
+  transform: scale(1);
+  padding: 30px 0;
+}
+
+/* -------------------- Meet the Team Section --------------------*/
+
+#Drive-Team {
+  background: #ffffff;
+  text-align: left;
+}
+
+#Drive-Team h4 {
+  font-size: 1.5rem;
+}
+
+#Drive-Team img {
+  width: 250px;
+  height: 300px;
+  transform: scale(1);
+  border-radius: 50%;
+  object-fit: cover;
+  /* Circular image */
+}
+
+#Drive-Team h6 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+#Drive-Team p {
+  text-align: left;
+}
+
+#Drive-Team .names {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem 0;
+  border: 2px solid #e6f0f0;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: #f5f8f827;
+
+}
+
+
+
+/* -------------------- Contact Section and Form --------------------*/
+#Contact {
+  background: #f1f6f7;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+  /* Vertical gap */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Areas .List {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+
+}
+
+
+#Contact form,
+#Contact iframe {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: #2b2e2e;
+  /* Remove fixed width and min-width to allow responsiveness */
+  width: 100%;
+  /* Take full width within its flex container initially */
+  flex: 1 1 45%;
+  /* flex-grow, flex-shrink, flex-basis */
+  /* 1: allow growing, 1: allow shrinking, 45%: target width */
+  max-width: 500px;
+  /* Set a reasonable maximum width for form/map */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(106, 214, 209, 0.1);
+  /* margin: 1rem; */
+  /* Use a smaller margin for better spacing on small screens */
+  box-sizing: border-box;
+  /* Include padding in element's total width and height */
+}
+
+/* Adjustments for inputs and textarea within the form */
+form h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+form label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  /* Ensure inputs take full width of their parent */
+  box-sizing: border-box;
+}
+
+form textarea {
+  resize: vertical;
+  /* Allow vertical resizing */
+}
+
+form button {
+  /* background-color: #007bff; */
+  /* Example primary color */
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 12px;
+  background-color: #008080;
+  /* Teal background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #006666;
+  /* Slightly darker teal on hover */
+}
+
+/* -------------------- Footer Section -------------------- */
+footer {
+  background: black;
+  height: 5%;
+  /* 5% of viewport height */
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+footer a {
+  padding: 0.25rem;
+  text-decoration: none;
+  color: rgb(205, 231, 225);
+}
+
+
+/* -------------------- Animation -------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  opacity: 0;
+  animation: fadeInUp linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+
+/* -------------------- Responsive Breakpoints -------------------- */
+
+
+@media screen and (max-width: 960px) {
+  .menu-icon {
+    display: block;
+  }
+
+  header {
+    height: 12%;
+    padding: 3rem, 1.5rem;
+    width: 100%;
+  }
+
+/* Logo image inside header */
+.logo img {
+  width: 150px;
+  height: auto;
+  z-index: 5;
+}
+
+  #menu {
+    visibility: visible;
+  }
+
+  nav ul {
+    display: none;
+    /* Hides the menu by default on small screens */
+    flex-direction: column;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    background-color: #011b16fa;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    z-index: 1000;
+    padding: 1.5rem 2rem;
+  }
+
+  nav ul li ul {
+    visibility: hidden;
+  }
+
+  #menu-toggle:checked~nav ul {
+    display: flex;
+    /* Shows the menu when checkbox is checked */
+  }
+
+  .Hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    gap: 0.25rem;
+  }
+
+  h1,
+  h3 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 1.5rem;
+
+  }
+
+  #Drive-Team .List,
+  #Contact .List {
+    padding: 1rem 0;
+
+  }
+
+
+  #Drive-Team h4 {
+    font-size: 1rem;
+  }
+
+  #Drive-Team h6 {
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  #Drive-Team .names p {
+    padding: 0.5rem;
+  }
+
+  #Hero {
+    height: 100vh;
+    width: 100%;
+    min-width: 250px;
+  }
+
+  #Hero .List {
+    gap: 6rem;
+    padding: 2rem 0;
+  }
+
+  #Hero .List h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    z-index: 1;
+    position: relative;
+  }
+
+  #Hero .List h2 {
+    display: block;
+    visibility: hidden;
+    font-size: 1rem;
+  }
+
+  #Hero .List h3 {
+    font-size: 1.2rem;
+  }
+
+  #Hero .List h2 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  #Hero .List h3 a {
+    font-size: 1rem;
+    font-weight: 500;
+
+  }
+
+  #Drive-Team img {
+    width: 175px;
+    height: 240px;
+    transform: scale(1);
+    border-radius: 50%;
+    object-fit: cover;
+    /* Circular image */
+  }
+
+  #Drive-Team .names {
+    width: 350px;
+    /* Fixed width - will be responsive */
+    height: auto;
+    min-width: 100%;
+  }
+
+  #intro {
+
+    padding: 2.5rem 0.5rem;
+
+  }
+
+  #intro .List h4 {
+
+    font-size: 1rem;
+
+  }
+
+  .Areas {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem 2rem;
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    font-size: 1rem;
+    padding: 2rem;
+  }
+
+}
