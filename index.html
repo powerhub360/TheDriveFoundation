@@ -66,10 +66,10 @@
       class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200"
     >
       <div
-        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4"
       >
         <!-- Brand Logo -->
-        <a href="#" class="flex items-center gap-3 group">
+        <a href="#" class="flex items-center gap-3 shrink-0 group">
           <img
             src="assets/images/Drive-logo.png"
             alt="Drive Foundation Logo"
@@ -89,38 +89,45 @@
           </div>
         </a>
 
-        <!-- Navigation Links (Desktop) -->
+        <!-- Navigation Links (Visible on Large screens lg and above) -->
         <nav
-          class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700"
+          class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm text-slate-700"
         >
-          <a href="#pillars" class="hover:text-teal-600 transition-colors"
+          <a
+            href="#pillars"
+            class="hover:text-teal-600 transition-colors whitespace-nowrap"
             >Impact Pillars</a
           >
-          <a href="#prize" class="hover:text-teal-600 transition-colors"
+          <a
+            href="#prize"
+            class="hover:text-teal-600 transition-colors whitespace-nowrap"
             >Betty Nwoks Prize</a
           >
-          <a href="#academy" class="hover:text-teal-600 transition-colors"
+          <a
+            href="#academy"
+            class="hover:text-teal-600 transition-colors whitespace-nowrap"
             >Academy</a
           >
-          <a href="#governance" class="hover:text-teal-600 transition-colors"
+          <a
+            href="#governance"
+            class="hover:text-teal-600 transition-colors whitespace-nowrap"
             >Governance</a
           >
-          <a href="#inquiries" class="hover:text-teal-600 transition-colors"
+          <a
+            href="#inquiries"
+            class="hover:text-teal-600 transition-colors whitespace-nowrap"
             >Contact</a
           >
         </nav>
 
-        <!-- Actions & Mobile Menu Toggle -->
-        <div class="flex items-center gap-3">
-          <!-- Donation Button (Desktop) -->
+        <!-- Actions & Mobile Button -->
+        <div class="flex items-center gap-3 shrink-0">
           <a
             href="#donate"
             class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-teal-600 border border-teal-600 hover:bg-teal-50 rounded-md transition-all shadow-sm"
           >
             Donate
           </a>
-
-          <!-- Apply Button (Desktop) -->
           <a
             href="#prize"
             class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-teal-600 hover:bg-teal-700 rounded-md transition-all shadow-sm"
@@ -128,11 +135,11 @@
             Apply For 2026
           </a>
 
-          <!-- Hamburger Menu Button (Mobile) -->
+          <!-- Hamburger Button (Visible on screens smaller than lg) -->
           <button
             id="mobile-menu-button"
             type="button"
-            class="md:hidden p-2 rounded-md text-slate-700 hover:text-teal-600 hover:bg-slate-100 focus:outline-none transition-colors"
+            class="lg:hidden p-2 rounded-md text-slate-700 hover:text-teal-600 hover:bg-slate-100 focus:outline-none transition-colors"
             aria-label="Toggle menu"
           >
             <svg
@@ -152,50 +159,52 @@
         </div>
       </div>
 
-      <!-- Mobile Menu Dropdown -->
+      <!-- Mobile Dropdown Menu -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg transition-all"
+        class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg"
       >
         <nav
           class="flex flex-col space-y-2 font-medium text-sm text-slate-700 pt-2"
         >
           <a
             href="#pillars"
-            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600"
             >Impact Pillars</a
           >
           <a
             href="#prize"
-            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600"
             >Betty Nwoks Prize</a
           >
           <a
             href="#academy"
-            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600"
             >Academy</a
           >
           <a
             href="#governance"
-            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600"
             >Governance</a
           >
           <a
             href="#inquiries"
-            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600"
             >Contact</a
           >
         </nav>
-        <div class="flex flex-col gap-2 pt-2 border-t border-slate-100">
+        <div
+          class="flex flex-col gap-2 pt-2 border-t border-slate-100 sm:hidden"
+        >
           <a
             href="#donate"
-            class="mobile-link w-full text-center px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-teal-600 border border-teal-600 hover:bg-teal-50 rounded-md transition-all shadow-sm"
+            class="mobile-link text-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-teal-600 border border-teal-600 hover:bg-teal-50 rounded-md"
           >
             Donate
           </a>
           <a
             href="#prize"
-            class="mobile-link w-full text-center px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-teal-600 hover:bg-teal-700 rounded-md transition-all shadow-sm"
+            class="mobile-link text-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-teal-600 hover:bg-teal-700 rounded-md"
           >
             Apply For 2026
           </a>
@@ -223,7 +232,7 @@
 
     <!-- HERO SECTION WITH VIDEO BACKGROUND -->
     <section
-      class="relative min-h-screen pt-20 flex items-center justify-center overflow-hidden bg-slate-900 text-white"
+      class="relative min-h-[100dvh] pt-20 flex flex-col justify-between overflow-hidden bg-slate-900 text-white"
     >
       <!-- Background Video Stream -->
       <video
@@ -238,38 +247,41 @@
       </video>
       <div class="absolute inset-0 hero-overlay"></div>
 
+      <!-- Hero Content Wrapper -->
       <div
-        class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-10"
+        class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 text-center z-10 flex-1 flex flex-col justify-center items-center"
       >
         <span
-          class="inline-block px-4 py-1.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-semibold tracking-widest uppercase mb-6"
+          class="inline-block px-4 py-1.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-semibold tracking-widest uppercase mb-4 sm:mb-6"
         >
           Local Action • Global Impact
         </span>
         <h1
-          class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight"
+          class="font-serif text-3xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight"
         >
           Empowering Leaders.<br />Fostering Innovation.<br />Driving Global
           Impact.
         </h1>
         <p
-          class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light mb-10 leading-relaxed"
+          class="text-sm sm:text-xl text-slate-300 max-w-3xl mx-auto font-light mb-6 sm:mb-10 leading-relaxed"
         >
           The Drive Foundation equips entrepreneurs and civic changemakers with
           equity-free grants, practical skills training, and leadership
           mentorship to turn bold ideas into lasting impact.
         </p>
 
-        <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <div
+          class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full sm:w-auto"
+        >
           <a
             href="#prize"
-            class="px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-teal-500/25 transition-all"
+            class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-teal-500/25 transition-all text-center text-sm sm:text-base"
           >
             Apply for 2026 Prize
           </a>
           <a
             href="#throwback"
-            class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 backdrop-blur-sm transition-all"
+            class="w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 backdrop-blur-sm transition-all text-center text-sm sm:text-base"
           >
             Explore Throwback 2025
           </a>
@@ -302,28 +314,44 @@
 
       <!-- Metric Ticker Bar -->
       <div
-        class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800/80 backdrop-blur-md"
+        class="relative z-10 shrink-0 w-full bg-slate-950/80 border-t border-slate-800/80 backdrop-blur-md"
       >
         <div
-          class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center"
+          class="max-w-7xl mx-auto px-4 py-4 sm:py-6 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-center"
         >
           <div>
-            <div class="text-3xl font-bold text-teal-400 font-serif">600+</div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">
+            <div
+              class="text-2xl sm:text-3xl font-bold text-teal-400 font-serif"
+            >
+              600+
+            </div>
+            <div
+              class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 mt-1"
+            >
               Fellows Trained
             </div>
           </div>
           <div>
-            <div class="text-3xl font-bold text-teal-400 font-serif">
+            <div
+              class="text-2xl sm:text-3xl font-bold text-teal-400 font-serif"
+            >
               ₦ 1,500,000+
             </div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">
+            <div
+              class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 mt-1"
+            >
               Capital Mobilized
             </div>
           </div>
           <div>
-            <div class="text-3xl font-bold text-teal-400 font-serif">20+</div>
-            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">
+            <div
+              class="text-2xl sm:text-3xl font-bold text-teal-400 font-serif"
+            >
+              20+
+            </div>
+            <div
+              class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-400 mt-1"
+            >
               Partner Hubs
             </div>
           </div>
