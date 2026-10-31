@@ -1,335 +1,1371 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Drive Foundation for Leadership Advancement & Empowerment| Official NGO
+    </title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icons -->
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: "#0B192C",
+                900: "#07101E",
+                950: "#040810",
+              },
+              teal: {
+                500: "#12B5CB",
+                600: "#0D5C75",
+                700: "#0A4B60",
+              },
+              turquoise: "#00B4D8",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-text {
+        background: linear-gradient(135deg, #0d5c75 0%, #00b4d8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          180deg,
+          rgba(15, 23, 42, 0.75) 0%,
+          rgba(15, 23, 42, 0.85) 100%
+        );
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-teal-500 selection:text-white"
+  >
+    <!-- NAVIGATION HEADER -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <img
+            src="assets/images/Drive-logo.png"
+            alt="Drive Foundation Logo"
+            class="w-10 h-10 rounded-lg object-cover shadow-md group-hover:scale-105 transition-transform duration-200"
+          />
+          <div>
+            <span
+              class="block font-serif text-lg font-bold text-slate-900 leading-tight"
+            >
+              The Drive Foundation
+            </span>
+            <span
+              class="block text-[10px] font-semibold tracking-wider text-teal-600 uppercase"
+            >
+              Leadership & Empowerment
+            </span>
+          </div>
+        </a>
 
-  <!-- Page Title -->
-  <title>Drive Foundation for Leadership Advancement and Empowerment</title>
-  <meta name="title" content="Drive Foundation for Leadership Advancement and Empowerment">
-
-  <!-- Description (SEO + accessibility) -->
-  <meta name="description"
-    content="Drive Foundation empowers individuals and communities through leadership development, education, and impactful social programs. Join us in driving change.">
-
-  <!-- Keywords (Optional but can help with SEO) -->
-  <meta name="keywords"
-    content="Drive Foundation, leadership development, education, community empowerment, non-profit, Nigeria, youth programs, social impact">
-
-  <!-- Author -->
-  <meta name="author" content="Drive Foundation, Dexter Ohaeri">
-
-  <!-- Accessibility: Language Declaration -->
-  <meta http-equiv="Content-Language" content="en" />
-
-<!-- Open Graph (for social sharing) -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://thedrivefoundation.org/">
-<meta property="og:title" content="Drive Foundation – Leadership Development, Education & Empowerment">
-<meta property="og:description" content="Drive Foundation empowers individuals and communities through leadership development, education, and impactful social programs initiatives.">
-<meta property="og:image" content="https://thedrivefoundation.org/image/cover-image.png">
-<!-- Replace with your actual image URL -->
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Drive Foundation –  Leadership Development, Education & Empowerment">
-<meta name="twitter:description" content="Empowering individuals and communities through leadership development, education, and impactful social programs. Join us in driving change..">
-<meta name="twitter:image" content="https://thedrivefoundation.org/image/cover-image.png">
-
-<!-- Favicon -->
-<link rel="icon" href="image/favico.ico" type="image/x-icon">
-
-<!-- Canonical URL (SEO) -->
-<link rel="canonical" href="https://thedrivefoundation.org/">
-
-<!-- Preconnect for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-
-  <body>
-    <header>
-      <div class="wrapper">
-        <div class="logo">
-          <img src="image/logo.png" alt="Logo">
-        </div>
-
-        <!-- HIDDEN CHECKBOX -->
-        <input type="checkbox" id="menu-toggle" />
-
-        <!-- HAMBURGER ICON LABEL -->
-        <label for="menu-toggle" class="menu-icon">
-          <img src="image/hamburger.png" id="menu" alt="Menu Icon">
-        </label>
-
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#intro">About</a></li>
-            <li>
-              <a href="#Projects">Core Mission</a>
-              <!-- <ul>
-                <li><a href="#Projects">The Kids Next Door</a></li>
-                <li><a href="#Projects">StoryBoard Short Film Contest</a></li>
-                <li><a href="#Projects">Betty Nwoks Prize for Entrepreneurship</a></li>
-              </ul> -->
-            </li>
-            <li>
-              <a href="#Drive-Team">Drive Team</a>
-              <ul>
-                <li><a href="#Drive-Team">Dexter Ohaeri</a></li>
-                <li><a href="#Drive-Team">Dr. Gbemisola Bamiduro</a></li>
-                <li><a href="#Drive-Team">Ego Samuel</a></li>
-              </ul>
-            </li>
-            <li><a href="https://www.youtube.com/@DriveFoundation/videos" target="_blank" id="Connect">Drive Connect</a>
-            </li>
-          </ul>
-
-
+        <!-- Navigation Links (Desktop) -->
+        <nav
+          class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700"
+        >
+          <a href="#pillars" class="hover:text-teal-600 transition-colors"
+            >Impact Pillars</a
+          >
+          <a href="#prize" class="hover:text-teal-600 transition-colors"
+            >Betty Nwoks Prize</a
+          >
+          <a href="#academy" class="hover:text-teal-600 transition-colors"
+            >Academy</a
+          >
+          <a href="#governance" class="hover:text-teal-600 transition-colors"
+            >Governance</a
+          >
+          <a href="#inquiries" class="hover:text-teal-600 transition-colors"
+            >Contact</a
+          >
         </nav>
+
+        <!-- Actions & Mobile Menu Toggle -->
+        <div class="flex items-center gap-3">
+          <!-- Donation Button (Desktop) -->
+          <a
+            href="#donate"
+            class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-teal-600 border border-teal-600 hover:bg-teal-50 rounded-md transition-all shadow-sm"
+          >
+            Donate
+          </a>
+
+          <!-- Apply Button (Desktop) -->
+          <a
+            href="#prize"
+            class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-teal-600 hover:bg-teal-700 rounded-md transition-all shadow-sm"
+          >
+            Apply For 2026
+          </a>
+
+          <!-- Hamburger Menu Button (Mobile) -->
+          <button
+            id="mobile-menu-button"
+            type="button"
+            class="md:hidden p-2 rounded-md text-slate-700 hover:text-teal-600 hover:bg-slate-100 focus:outline-none transition-colors"
+            aria-label="Toggle menu"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-lg transition-all"
+      >
+        <nav
+          class="flex flex-col space-y-2 font-medium text-sm text-slate-700 pt-2"
+        >
+          <a
+            href="#pillars"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            >Impact Pillars</a
+          >
+          <a
+            href="#prize"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            >Betty Nwoks Prize</a
+          >
+          <a
+            href="#academy"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            >Academy</a
+          >
+          <a
+            href="#governance"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            >Governance</a
+          >
+          <a
+            href="#inquiries"
+            class="mobile-link block py-2 px-3 rounded-md hover:bg-teal-50 hover:text-teal-600 transition-colors"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex flex-col gap-2 pt-2 border-t border-slate-100">
+          <a
+            href="#donate"
+            class="mobile-link w-full text-center px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-teal-600 border border-teal-600 hover:bg-teal-50 rounded-md transition-all shadow-sm"
+          >
+            Donate
+          </a>
+          <a
+            href="#prize"
+            class="mobile-link w-full text-center px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-teal-600 hover:bg-teal-700 rounded-md transition-all shadow-sm"
+          >
+            Apply For 2026
+          </a>
+        </div>
       </div>
     </header>
 
-
-    <main>
-
-      <section class="Areas" id="Hero">
-
-        <video autoplay muted loop playsinline id="bgVideo">
-          <source src="video/bg.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-
-        <div class="List">
-          <h2 class="fade-scroll">Welcome onboard</h2>
-          <h1 class="fade-scroll">Drive Foundation<br>for Leadership Advancement and Empowerment</h1>
-
-          <h3 class="fade-scroll">
-            The Betty Nwoks Price for Entrepreneurship is now open.<br>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeATKjNNZhrSeJJHywBBCOvY7rLH7h59KvsKPxxoJwRsyOPJQ/viewform"
-              target="_blank">
-              <em>Register to become a 2025 Fellow</em>
-            </a>
-          </h3>
-        </div>
-
-      </section>
-
-
-
-
-      <section class="Areas" id="intro">
-        <h1 class="fade-scroll">Who we are</h1>
-        <div class="List">
-          <p class="fade-scroll">The <b>Drive Foundation for Leadership Advancement and Empowerment </b>is a
-            forward-thinking organization
-            dedicated to empowering individuals and communities through inclusive skill-building and transformational
-            leadership development. Its mission is to create lasting change by equipping youth and underserved groups
-            with the tools to thrive in a rapidly evolving world.
-            <br>
-            <br>
-            The Foundation offers training, mentorship, and capacity-building programs in areas like fashion design,
-            software development, arts and crafts, digital support, literacy, and civic education. These initiatives
-            promote career readiness, entrepreneurship, and social impact.
-            <br>
-            <br>
-            By emphasizing innovation, character, and civic responsibility, Drive Foundation nurtures resilient,
-            purpose-driven individuals. Through strategic partnerships and community efforts, it continues to expand
-            its
-            reach—fueling progress and shaping ethical, visionary leaders for the future.
-          </p>
-
-          <h4 class="fade-scroll"> <span><a href="https://www.youtube.com/@DriveFoundation/videos" target="_blank">Click
-                to learn more
-              </a></span>
-          </h4>
-
-        </div>
-      </section>
-
-      <section class="Areas" id="Projects">
-        <h3 class="fade-scroll">Our Core Mission Areas</h3>
-        <div class="List">
-          <div class="top">
-            <div class="names">
-              <img src="image/strategy.png" alt="icon of a chess peice" />
-              <h4> Leadership Development</h4>
-              <p>Empowering youth and emerging leaders with the values, skills, and confidence to take initiative,
-                inspire others, and drive positive change in their communities.</p>
-            </div>
-
-            <div class="names">
-              <img src="image/business.png" alt="icon of a suitcase and a light buld design" />
-              <h4> Entrepreneurship & Economic Empowerment</h4>
-              <p>Empowering youth and emerging leaders with the values, skills, and confidence to take initiative,
-                inspire others, and drive positive change in their communities.</p>
-            </div>
-          </div>
-
-          <div class="bottom">
-            <div class="names">
-              <img src="image/engagement.png" alt="Icon of handshake" />
-              <h4> Civic Engagement</h4>
-              <p>Encouraging active citizenship by fostering awareness, responsibility, and participation in social and
-                civic initiatives
-                that promote justice, equity, and good governance.</p>
-            </div>
-
-            <div class="names">
-              <img src="image/digital.png" alt="Icon of a cutout of a megaphone in a chatbox" />
-              <h4> Digital Literacy</h4>
-              <p>Providing essential digital skills and knowledge—such as online communication, media creation, and
-                basic
-                tech fluency—to
-                bridge the digital divide and prepare individuals for modern opportunities.</p>
-            </div>
-          </div>
-      </section>
-
-
-
-      <section class="Areas" id="Drive-Team">
-        <h3 class="fade-scroll">Meet the Team</h3>
-        <div class="List">
-          <div class="top">
-            <div class="names">
-
-              <img src="image/Dexter.jpg" alt="Dexter Ohaeri Portrait" />
-
-              <div class="desc">
-                <h4>Dexter Ohaeri</h4>
-                <h6>Executive Director</h6>
-              </div>
-
-              <p><em><b>Dexter Ohaeri</b></em> is the Executive Director of the Drive Foundation, leading efforts to
-                empower youth and underserved communities through faith-based, skill-driven programs.
-                With a background in digital design, storytelling and Communication Engineering, Dexter drives
-                a vision of purpose-driven leadership and community transformation.
-              </p>
-
-            </div>
-
-            <div class="names">
-              <img src="image/Gbemisola.jpg" alt="Gbemisola Bamiduro Portrait" />
-
-              <div class="desc">
-                <h4>Gbemisola Bamiduro (Ph.D)</h4>
-                <h6>Director of Finance and Administration</h6>
-              </div>
-
-              <p><em><b>Dr. Gbemisola Bamiduro</b></em> is the Director of Finance and Administration at the Drive
-                Foundation, where
-                she oversees financial strategy, organizational systems, and daily operations. With a Ph.D. in
-                Environmental Chemistry
-                and a background in research and administration, she ensures that Drive's programs are built on strong
-                planning,
-                accountability, and long-term sustainability.
-              </p>
-
-            </div>
-          </div>
-
-          <div class="bottom">
-
-            <div class="names">
-              <img src="image/Ego-Samuel.png" alt="Ego Samuel Portrait" />
-
-              <div class="desc">
-                <h4>Ego Samuel</h4>
-                <h6>Project Manager</h6>
-              </div>
-
-              <p><em><b>Nwakaego Joy Samuel</b></em> is the Project Manager at the Drive Foundation, where she leads
-                educational initiatives and community programs. With
-                over 10 years of experience in teaching, counselling, and management, and a Master’s in Guidance and
-                Counselling, she
-                brings strong leadership and a passion for empowering educators, parents, and learners.
-              </p>
-
-            </div>
-
-            <!-- <div class="names">
-              <img src="digital.png" alt="Facilitator Photo" />
-              <h4> Digital Literacy</h4>
-              <p>Providing essential digital skills and knowledge—such as online communication, media creation, and
-                basic
-                tech fluency—to
-                bridge the digital divide and prepare individuals for modern opportunities.</p>
-            </div> -->
-          </div>
-        </div>
-      </section>
-
-
-
-      <section class="Areas" id="Contact">
-
-        <div class="List" class="fade-scroll">
-          <form>
-            <h3>Contact Us</h3>
-
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your full name" required />
-
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="you@example.com" required />
-
-            <label for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
-
-            <button type="submit">Send Message</button>
-          </form>
-
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.153638337802!2d7.3669723!3d8.9579872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e72171876771f%3A0xca2dfd4624f9ce22!2sObafemi%20Awolowo%20St%2C%20Lugbe%20900107%2C%20Federal%20Capital%20Territory%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1750868998063!5m2!1sen!2sus"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-
-
-        </div>
-
-      </section>
-
-
-    </main>
-
-    <footer>
-      &copy; 2025 Drive Foundation for Leadership Advancement and Empowerment.
-      <!-- Designed & developed by <ahref="mailto:powerproject360@gmail.com">Dexter Ohaeri</a> -->
-    </footer>
-
+    <!-- Simple Toggle Script -->
     <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            // Optional: stop observing once visible
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
       });
 
-      document.querySelectorAll('.fade-scroll').forEach(el => {
-        observer.observe(el);
+      // Automatically close mobile menu when a link is clicked
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
       });
     </script>
 
+    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+    <section
+      class="relative min-h-screen pt-20 flex items-center justify-center overflow-hidden bg-slate-900 text-white"
+    >
+      <!-- Background Video Stream -->
+      <video
+        id="heroVideo"
+        class="absolute inset-0 w-full h-full object-cover opacity-40"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="assets/video/bg.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 hero-overlay"></div>
 
+      <div
+        class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-10"
+      >
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-500/30 text-xs font-semibold tracking-widest uppercase mb-6"
+        >
+          Local Action • Global Impact
+        </span>
+        <h1
+          class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight"
+        >
+          Empowering Leaders.<br />Fostering Innovation.<br />Driving Global
+          Impact.
+        </h1>
+        <p
+          class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light mb-10 leading-relaxed"
+        >
+          The Drive Foundation equips entrepreneurs and civic changemakers with
+          equity-free grants, practical skills training, and leadership
+          mentorship to turn bold ideas into lasting impact.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-16">
+          <a
+            href="#prize"
+            class="px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-teal-500/25 transition-all"
+          >
+            Apply for 2026 Prize
+          </a>
+          <a
+            href="#throwback"
+            class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 backdrop-blur-sm transition-all"
+          >
+            Explore Throwback 2025
+          </a>
+        </div>
+
+        <!-- Video Ambient Controls -->
+        <div
+          class="flex justify-center items-center gap-4 text-xs text-slate-400"
+        >
+          <span class="flex items-center gap-1.5"
+            ><i data-lucide="video" class="w-4 h-4 text-teal-400"></i> Ambient
+            Video Feed</span
+          >
+          <button
+            onclick="toggleMute()"
+            class="hover:text-white transition-colors underline flex items-center gap-1"
+          >
+            <i id="muteIcon" data-lucide="volume-x" class="w-4 h-4"></i>
+            <span id="muteText">Unmute</span>
+          </button>
+          <button
+            onclick="togglePlay()"
+            class="hover:text-white transition-colors underline flex items-center gap-1"
+          >
+            <i id="playIcon" data-lucide="pause" class="w-4 h-4"></i>
+            <span id="playText">Pause</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Metric Ticker Bar -->
+      <div
+        class="absolute bottom-0 inset-x-0 bg-slate-950/80 border-t border-slate-800/80 backdrop-blur-md"
+      >
+        <div
+          class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center"
+        >
+          <div>
+            <div class="text-3xl font-bold text-teal-400 font-serif">600+</div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">
+              Fellows Trained
+            </div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-teal-400 font-serif">
+              ₦ 1,500,000+
+            </div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">
+              Capital Mobilized
+            </div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold text-teal-400 font-serif">20+</div>
+            <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">
+              Partner Hubs
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE STRATEGIC IMPACT PILLARS -->
+    <section id="pillars" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
+            >Core Strategic Areas</span
+          >
+          <h2
+            class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2"
+          >
+            Our Strategic Impact Pillars
+          </h2>
+          <p class="text-slate-600 mt-4">
+            Directly aligned with Drive Foundation's core mission for holistic
+            leadership advancement.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Pillar 1 -->
+          <div
+            class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition-all"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">
+              Leadership Development
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Executive coaching, governance training, and ethical leadership
+              programs designed to nurture transformational social leaders.
+            </p>
+            <a
+              href="#academy"
+              class="text-xs font-bold text-teal-600 uppercase tracking-wider hover:text-teal-700 inline-flex items-center gap-1"
+            >
+              Explore Curriculum &rarr;
+            </a>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div
+            class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition-all"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="trending-up" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">
+              Entrepreneurship & Economy
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Catalyzing small businesses and social enterprises via the Betty
+              Nwoks Prize and equity-free incubation support.
+            </p>
+            <a
+              href="#prize"
+              class="text-xs font-bold text-teal-600 uppercase tracking-wider hover:text-teal-700 inline-flex items-center gap-1"
+            >
+              Explore Grants &rarr;
+            </a>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div
+            class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition-all"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">
+              Civic Engagement
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Mobilizing youth for active democratic participation, policy
+              design, community governance, and advocacy.
+            </p>
+            <a
+              href="#inquiries"
+              class="text-xs font-bold text-teal-600 uppercase tracking-wider hover:text-teal-700 inline-flex items-center gap-1"
+            >
+              Explore Initiatives &rarr;
+            </a>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div
+            class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:shadow-xl hover:-translate-y-1 transition-all"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="laptop" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">
+              Digital Literacy
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              Building technical capacity, AI literacy, web engineering, and
+              digital tools for non-profit creators and innovators.
+            </p>
+            <a
+              href="#academy"
+              class="text-xs font-bold text-teal-600 uppercase tracking-wider hover:text-teal-700 inline-flex items-center gap-1"
+            >
+              Explore Tech Labs &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP GRANTS — BETTY NWOKS PRIZE (2026 & 2025 THROWBACK) -->
+
+    <section id="prize" class="py-24 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 2026 Announcement Card -->
+        <div
+          class="rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 p-8 sm:p-12 border border-slate-700/80 shadow-2xl mb-20"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8">
+              <span
+                class="inline-block px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-4"
+              >
+                2026 Edition Announcement
+              </span>
+
+              <h2 class="font-serif text-3xl sm:text-5xl font-bold mb-4">
+                The Betty Nwoks Prize for Entrepreneurship
+              </h2>
+
+              <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                Established in honor of
+                <a
+                  href="https://bettynwoks.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-teal-400 font-semibold hover:text-teal-300 underline underline-offset-4 transition-colors"
+                  >Beatrice Nwokomah-Ohaeri</a
+                >, this flagship program promotes skills development and
+                entrepreneurship, with a particular focus on fashion and allied
+                industries. Apply for the 2026 edition.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-6 text-sm mb-8">
+                <div class="flex items-center gap-2 text-teal-400">
+                  <i data-lucide="check-circle" class="w-5 h-5"></i>
+                  <span>
+                    <strong>Grant Funding:</strong> ₦250,000 Equity-Free
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-2 text-teal-400">
+                  <i data-lucide="clock" class="w-5 h-5"></i>
+                  <span> <strong>Status:</strong> Applications Open </span>
+                </div>
+              </div>
+
+              <!-- Application CTA -->
+              <a
+                href="#inquiries"
+                class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold rounded-xl transition-all shadow-lg hover:shadow-teal-500/20"
+              >
+                Apply for the 2026 Prize
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </a>
+            </div>
+
+            <!-- Donation and Sponsorship CTA -->
+            <div
+              class="lg:col-span-4 bg-slate-950/60 p-6 rounded-2xl border border-slate-800 text-center"
+            >
+              <div class="text-xs uppercase font-semibold text-teal-400 mb-2">
+                Support Our Mission
+              </div>
+
+              <div class="text-2xl font-bold text-white mb-1">
+                Invest in the Next Generation
+              </div>
+
+              <p class="text-xs text-slate-400 mb-6">
+                Help us empower emerging entrepreneurs through donations,
+                scholarships, and candidate sponsorships.
+              </p>
+
+              <a
+                href="#inquiries"
+                class="block w-full py-3 bg-teal-600 hover:bg-teal-500 text-white font-semibold rounded-lg transition-colors"
+              >
+                Donate or Sponsor a Candidate
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2025 Throwback Retrospective Header -->
+        <div id="throwback" class="text-center max-w-3xl mx-auto mb-12">
+          <span
+            class="text-xs font-semibold tracking-widest text-teal-400 uppercase"
+          >
+            Retrospective Highlights
+          </span>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">
+            The Betty Nwoks Prize 2025 Throwback
+          </h2>
+
+          <p class="text-slate-400 mt-4">
+            Celebrating $500,000+ awarded in 2025 to 5 visionary founders across
+            5 sectors. Look back at our top winners and program acceptance pitch
+            milestones.
+          </p>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+          <div
+            class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60 text-center"
+          >
+            <div class="text-3xl font-bold text-teal-400 font-serif">
+              10 Finalists
+            </div>
+            <div class="text-xs text-slate-400 mt-1">
+              Out of 64 Potential Candidates
+            </div>
+          </div>
+
+          <div
+            class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60 text-center"
+          >
+            <div class="text-3xl font-bold text-teal-400 font-serif">
+              5 Ventures
+            </div>
+            <div class="text-xs text-slate-400 mt-1">
+              Registered and Funded in 2025
+            </div>
+          </div>
+
+          <div
+            class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60 text-center"
+          >
+            <div class="text-3xl font-bold text-teal-400 font-serif">
+              ₦500,000+
+            </div>
+            <div class="text-xs text-slate-400 mt-1">
+              2025 Funds Distributed
+            </div>
+          </div>
+
+          <div
+            class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60 text-center"
+          >
+            <div class="text-3xl font-bold text-teal-400 font-serif">100%</div>
+            <div class="text-xs text-slate-400 mt-1">Equity-Free Capital</div>
+          </div>
+        </div>
+
+        <!-- Winner Spotlights -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- The Top 5 Candidates -->
+          <div
+            class="bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700 group hover:border-teal-500/50 transition-all"
+          >
+            <div class="h-48 bg-slate-700 relative overflow-hidden">
+              <img
+                src="assets/images/top-5-candidates.png"
+                alt="Top 5 Candidates"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <span
+                class="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full"
+              >
+                Top 5 Candidates
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs text-teal-400 font-semibold mb-1">
+                Port Harcourt 2025
+              </div>
+
+              <h3 class="font-serif text-xl font-bold text-white mb-2">
+                2025 Winners' Remark
+              </h3>
+
+              <p class="text-slate-300 text-sm mb-4">
+                Over 200 investors, policy advisors, and community leaders
+                gathered live for the final venture pitch day and funding award
+                gala.
+              </p>
+
+              <a
+                href="https://youtu.be/UZCO9PUEVbI"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs font-bold text-teal-400 hover:text-teal-300 inline-flex items-center gap-1"
+              >
+                View Event Recap &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- 1st Place -->
+          <div
+            class="bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700 group hover:border-teal-500/50 transition-all"
+          >
+            <div class="h-48 bg-slate-700 relative overflow-hidden">
+              <img
+                src="assets/images/1st-winner.png"
+                alt="EcoAgri Tech"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <span
+                class="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full"
+              >
+                1st Place 2025
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs text-teal-400 font-semibold mb-1">
+                ₦200,000 Winner
+              </div>
+
+              <h3 class="font-serif text-xl font-bold text-white mb-2">
+                Amarachi Joy Duru
+              </h3>
+
+              <p class="text-slate-300 text-sm mb-4">
+                Founded by Amina Bello (Lagos Hub). Solar-powered cold storage
+                units reducing post-harvest loss for 1,200+ rural farm
+                cooperatives.
+              </p>
+
+              <a
+                href="#inquiries"
+                class="text-xs font-bold text-teal-400 hover:text-teal-300 inline-flex items-center gap-1"
+              >
+                Read Her Story &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- 2nd Place -->
+          <div
+            class="bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700 group hover:border-teal-500/50 transition-all"
+          >
+            <div class="h-48 bg-slate-700 relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+                alt="EduAccess Mobile"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+
+              <span
+                class="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded-full"
+              >
+                Social Impact
+              </span>
+            </div>
+
+            <div class="p-6">
+              <div class="text-xs text-teal-400 font-semibold mb-1">
+                The Awards
+              </div>
+
+              <h3 class="font-serif text-xl font-bold text-white mb-2">
+                The Tory Teller's Story
+              </h3>
+
+              <p class="text-slate-300 text-sm mb-4">
+                Founded by David Ochieng (Nairobi Hub). Offline-first STEM
+                curriculum delivered via basic SMS and USSD to 15,000+ primary
+                students.
+              </p>
+
+              <a
+                href="#inquiries"
+                class="text-xs font-bold text-teal-400 hover:text-teal-300 inline-flex items-center gap-1"
+              >
+                See the Awards &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PHILANTHROPY IMPACT CALCULATOR -->
+
+    <!-- GOVERNANCE & LEADERSHIP -->
+    <section id="governance" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
+            >Governance & Leadership</span
+          >
+          <h2
+            class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2"
+          >
+            Board & Executive Officers
+          </h2>
+          <p class="text-slate-600 mt-4">
+            Directing Drive Foundation's global vision, fiscal governance, and
+            community impact.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Member 1 -->
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm text-center"
+          >
+            <div
+              class="w-20 h-20 rounded-full bg-teal-600 text-white font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              DO
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900">
+              Dexter Ohaeri
+            </h3>
+            <p
+              class="text-xs font-semibold text-teal-600 uppercase tracking-wider mt-1 mb-4"
+            >
+              E.D / Board Chairman
+            </p>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Leading global strategy, creative media, and brand architecture to
+              elevate social impact stories across international platforms.
+            </p>
+          </div>
+
+          <!-- Member 2 -->
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm text-center"
+          >
+            <div
+              class="w-20 h-20 rounded-full bg-teal-600 text-white font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              GB
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900">
+              Dr. Gbemisola Bamiduro
+            </h3>
+            <p
+              class="text-xs font-semibold text-teal-600 uppercase tracking-wider mt-1 mb-4"
+            >
+              Director of Finance & Administration
+            </p>
+
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Overseeing financial compliance, grant disbursement frameworks,
+              and institutional administration for maximum donor efficiency.
+            </p>
+          </div>
+
+          <!-- Member 3 -->
+          <div
+            class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm text-center"
+          >
+            <div
+              class="w-20 h-20 rounded-full bg-teal-600 text-white font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
+            >
+              ES
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-900">
+              Ego Samuel
+            </h3>
+            <p
+              class="text-xs font-semibold text-teal-600 uppercase tracking-wider mt-1 mb-4"
+            >
+              Manager, Global Project & Education
+            </p>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Directing youth mentorship frameworks, fellow wellness programs,
+              and educational development initiatives across regional hubs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERNATIONAL FOOTPRINT -->
+    <!--     <section class="py-24 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
+            >International Footprint</span
+          >
+          <h2
+            class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2"
+          >
+            Our Regional Operations
+          </h2>
+          <p class="text-slate-600 mt-4">
+            Connecting grassroots innovators to international institutional
+            networks.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="map-pin" class="w-5 h-5 text-teal-600"></i>
+              <h3 class="font-serif text-lg font-bold text-slate-900">
+                Nigeria Hub
+              </h3>
+            </div>
+            <div class="text-xs font-semibold text-teal-600 mb-2">
+              Port Harcourt, Nigeria
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Primary innovation desk for the Betty Nwoks Prize, digital
+              literacy bootcamps, and civic advocacy hubs.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="map-pin" class="w-5 h-5 text-teal-600"></i>
+              <h3 class="font-serif text-lg font-bold text-slate-900">
+                East Africa Desk
+              </h3>
+            </div>
+            <div class="text-xs font-semibold text-teal-600 mb-2">
+              Nairobi, Kenya
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Focusing on agritech ventures, climate action leadership, and
+              youth policy acceleration.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="globe" class="w-5 h-5 text-teal-600"></i>
+              <h3 class="font-serif text-lg font-bold text-slate-900">
+                Diaspora & Global
+              </h3>
+            </div>
+            <div class="text-xs font-semibold text-teal-600 mb-2">
+              North America & Europe
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Executive advisory network, global donor stewardship, and mentor
+              exchanges.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- GLOBAL INQUIRIES SECRETARIAT FORM -->
+    <!--     <section id="inquiries" class="py-24 bg-slate-100">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/80"
+        >
+          <div class="text-center mb-8">
+            <span
+              class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
+              >Global Inquiries</span
+            >
+            <h2 class="font-serif text-3xl font-bold text-slate-900 mt-2">
+              Connect With Our Secretariat
+            </h2>
+            <p class="text-slate-600 text-sm mt-2">
+              Reach out for institutional partnerships, fellowship details, or
+              media inquiries.
+            </p>
+          </div>
+
+          <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                  >Full Name *</label
+                >
+                <input
+                  type="text"
+                  placeholder="Dr. Sarah Jenkins"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm"
+                />
+              </div>
+              <div>
+                <label
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                  >Email Address *</label
+                >
+                <input
+                  type="email"
+                  placeholder="s.jenkins@organization.org"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label
+                class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                >Inquiry Type</label
+              >
+              <select
+                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
+              >
+                <option>Institutional Partnership</option>
+                <option>Betty Nwoks Prize Inquiry</option>
+                <option>Fellowship Application Question</option>
+                <option>Media & Governance</option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                >Message *</label
+              >
+              <textarea
+                rows="4"
+                placeholder="How can we collaborate or support your application?"
+                required
+                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition-colors"
+            >
+              Submit Inquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- INTERNATIONAL FOOTPRINT & GLOBAL INQUIRIES -->
+    <section id="inquiries" class="py-24 bg-white border-t border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span
+            class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
+          >
+            Our Global Presence
+          </span>
+          <h2
+            class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2"
+          >
+            Connecting Across Borders
+          </h2>
+          <p class="text-slate-600 mt-4">
+            Connecting grassroots innovators to international institutional
+            networks and opportunities for collaboration.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="map-pin" class="w-5 h-5 text-teal-600"></i>
+              <h3 class="font-serif text-lg font-bold text-slate-900">
+                Global HQ
+              </h3>
+            </div>
+            <div class="text-xs font-semibold text-teal-600 mb-2">
+              Abuja, Nigeria
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Primary innovation desk for the Betty Nwoks Prize, digital
+              literacy bootcamps, and civic advocacy hubs.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="map-pin" class="w-5 h-5 text-teal-600"></i>
+              <h3 class="font-serif text-lg font-bold text-slate-900">
+                Project Desk
+              </h3>
+            </div>
+            <div class="text-xs font-semibold text-teal-600 mb-2">
+              Port Harcourt, Nigeria
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Focusing on agritech ventures, climate action leadership, and
+              youth policy acceleration.
+            </p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+              <i data-lucide="globe" class="w-5 h-5 text-teal-600"></i>
+              <h3 class="font-serif text-lg font-bold text-slate-900">
+                Diaspora Hub
+              </h3>
+            </div>
+            <div class="text-xs font-semibold text-teal-600 mb-2">
+              North America & Europe
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Executive advisory network, global donor stewardship, and mentor
+              exchanges.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div class="lg:pt-8">
+            <span
+              class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
+            >
+              Global Inquiries
+            </span>
+            <h2
+              class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2"
+            >
+              Connect With Our Secretariat
+            </h2>
+            <p class="text-slate-600 mt-4 leading-relaxed">
+              Whether you are exploring an institutional partnership, seeking
+              information about our programmes, or interested in supporting our
+              mission, we welcome your inquiry.
+            </p>
+
+            <div class="mt-8 space-y-5">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="handshake" class="w-5 h-5 text-teal-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">
+                    Institutional Partnerships
+                  </h3>
+                  <p class="text-slate-600 text-sm mt-1">
+                    Explore opportunities for collaboration and shared impact.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center shrink-0"
+                >
+                  <i
+                    data-lucide="graduation-cap"
+                    class="w-5 h-5 text-teal-600"
+                  ></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">
+                    Programmes & Fellowships
+                  </h3>
+                  <p class="text-slate-600 text-sm mt-1">
+                    Get information about our initiatives, training, and
+                    opportunities.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center shrink-0"
+                >
+                  <i data-lucide="newspaper" class="w-5 h-5 text-teal-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-sm">
+                    Media & Communications
+                  </h3>
+                  <p class="text-slate-600 text-sm mt-1">
+                    Direct media, press, and organizational communication
+                    requests to our team.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-slate-50 rounded-3xl p-8 sm:p-10 border border-slate-200"
+          >
+            <div class="mb-8">
+              <h3 class="font-serif text-2xl font-bold text-slate-900">
+                Send an Inquiry
+              </h3>
+              <p class="text-slate-600 text-sm mt-2">
+                Complete the form below and our secretariat will review your
+                message.
+              </p>
+            </div>
+
+            <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                  >
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Your full name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                  >
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                >
+                  Inquiry Type
+                </label>
+                <select
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
+                >
+                  <option>Institutional Partnership</option>
+                  <option>Betty Nwoks Prize Inquiry</option>
+                  <option>Fellowship Application Question</option>
+                  <option>Media & Communications</option>
+                  <option>Donations & Support</option>
+                  <option>General Inquiry</option>
+                </select>
+              </div>
+
+              <div>
+                <label
+                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                >
+                  Message *
+                </label>
+                <textarea
+                  rows="4"
+                  placeholder="How can we collaborate or support your inquiry?"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-4 bg-slate-900 hover:bg-teal-700 text-white font-bold rounded-xl transition-colors"
+              >
+                Submit Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div class="md:col-span-2">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+              <img
+                src="assets/images/Drive-logo.png"
+                alt="Drive Foundation Logo"
+                class="w-10 h-10 rounded-lg object-cover shadow-md group-hover:scale-105 transition-transform duration-200"
+              />
+              <div>
+                <span
+                  class="block font-sans uppercase tracking-wider text-lg font-bold text-white leading-tight"
+                >
+                  The Drive Foundation
+                </span>
+              </div>
+            </a>
+            <p class="text-sm text-slate-400 max-w-md leading-relaxed mt-4">
+              The Drive Foundation for Leadership Advancement & Empowerment is a
+              registered non-governmental organization dedicated to empowering
+              visionary social leaders, funding high-impact ventures, and
+              driving sustainable civic progress across emerging economies. It
+              is registered in Nigeria with the coutries CAC.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="text-xs font-bold text-white uppercase tracking-wider mb-4"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-2 text-sm">
+              <!--        <li>
+                <a href="#about" class="hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li> -->
+              <li>
+                <a href="#prize" class="hover:text-white transition-colors"
+                  >Betty Nwoks Prize</a
+                >
+              </li>
+              <li>
+                <a href="#governance" class="hover:text-white transition-colors"
+                  >Governance</a
+                >
+              </li>
+              <li>
+                <a href="#inquiries" class="hover:text-white transition-colors"
+                  >Secretariat Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-xs font-bold text-white uppercase tracking-wider mb-4"
+            >
+              Legal & Compliance
+            </h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >NGO Governance Code</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Financial Reporting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4"
+        >
+          <p>
+            &copy; 2026 Drive Foundation for Leadership Advancement &
+            Empowerment. All rights reserved.
+          </p>
+          <p>Designed with institutional non-profit standards.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Video Player Controls
+      const video = document.getElementById("heroVideo");
+      function toggleMute() {
+        video.muted = !video.muted;
+        document.getElementById("muteText").innerText = video.muted
+          ? "Unmute"
+          : "Mute";
+        document
+          .getElementById("muteIcon")
+          .setAttribute("data-lucide", video.muted ? "volume-x" : "volume-2");
+        lucide.createIcons();
+      }
+
+      function togglePlay() {
+        if (video.paused) {
+          video.play();
+          document.getElementById("playText").innerText = "Pause";
+          document
+            .getElementById("playIcon")
+            .setAttribute("data-lucide", "pause");
+        } else {
+          video.pause();
+          document.getElementById("playText").innerText = "Play";
+          document
+            .getElementById("playIcon")
+            .setAttribute("data-lucide", "play");
+        }
+        lucide.createIcons();
+      }
+
+      // Impact Calculator Slider Logic
+      const slider = document.getElementById("impactSlider");
+      slider.addEventListener("input", function () {
+        const val = parseInt(this.value);
+        document.getElementById("sliderValue").innerText = `$${val} / month`;
+        document.getElementById("fellowsCount").innerText =
+          `${Math.round(val / 25)} Fellows`;
+        document.getElementById("grantCount").innerText =
+          `${Math.floor(val / 100)} Micro-Grant${Math.floor(val / 100) > 1 ? "s" : ""}`;
+        document.getElementById("mentorshipCount").innerText =
+          `${val * 1.2} Hours`;
+      });
+
+      // Form Submit Handler
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        alert(
+          "Thank you! Your inquiry has been submitted to The Drive Foundation Secretariat.",
+        );
+        e.target.reset();
+      }
+    </script>
   </body>
-
 </html>
