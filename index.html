@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Drive Foundation for Leadership Advancement & Empowerment| Official NGO
+      Drive Foundation for Leadership Advancement & Empowerment | Official NGO
     </title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,9 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
       rel="stylesheet"
     />
-    <!-- Lucide Icons -->
 
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -63,7 +62,7 @@
   >
     <!-- NAVIGATION HEADER -->
     <header
-      class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200"
+      class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200"
     >
       <div
         class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4"
@@ -212,24 +211,6 @@
       </div>
     </header>
 
-    <!-- Simple Toggle Script -->
-    <script>
-      const btn = document.getElementById("mobile-menu-button");
-      const menu = document.getElementById("mobile-menu");
-      const mobileLinks = document.querySelectorAll(".mobile-link");
-
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-
-      // Automatically close mobile menu when a link is clicked
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.add("hidden");
-        });
-      });
-    </script>
-
     <!-- HERO SECTION WITH VIDEO BACKGROUND -->
     <section
       class="relative min-h-[100dvh] pt-20 flex flex-col justify-between overflow-hidden bg-slate-900 text-white"
@@ -259,12 +240,15 @@
         <h1
           class="font-serif text-3xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-4 sm:mb-6 leading-tight"
         >
-          Empowerment. Innovation. Impact.
+          Empowering Leaders.<br />Fostering Innovation.<br />Driving Global
+          Impact.
         </h1>
         <p
           class="text-sm sm:text-xl text-slate-300 max-w-3xl mx-auto font-light mb-6 sm:mb-10 leading-relaxed"
         >
-          The Drive Foundation equips future Founders and Leaders to turn bold ideas into lasting impact.
+          The Drive Foundation equips entrepreneurs and civic changemakers with
+          equity-free grants, practical skills training, and leadership
+          mentorship to turn bold ideas into lasting impact.
         </p>
 
         <div
@@ -288,10 +272,10 @@
         <div
           class="flex justify-center items-center gap-4 text-xs text-slate-400"
         >
-          <span class="flex items-center gap-1.5"
-            ><i data-lucide="video" class="w-4 h-4 text-teal-400"></i> Ambient
-            Video Feed</span
-          >
+          <span class="flex items-center gap-1.5">
+            <i data-lucide="video" class="w-4 h-4 text-teal-400"></i> Ambient
+            Video Feed
+          </span>
           <button
             onclick="toggleMute()"
             class="hover:text-white transition-colors underline flex items-center gap-1"
@@ -476,7 +460,6 @@
     </section>
 
     <!-- FLAGSHIP GRANTS — BETTY NWOKS PRIZE (2026 & 2025 THROWBACK) -->
-
     <section id="prize" class="py-24 bg-slate-900 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- 2026 Announcement Card -->
@@ -606,7 +589,7 @@
             class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/60 text-center"
           >
             <div class="text-3xl font-bold text-teal-400 font-serif">
-              ₦500K+
+              ₦500k+
             </div>
             <div class="text-xs text-slate-400 mt-1">
               2025 Funds Distributed
@@ -754,8 +737,6 @@
       </div>
     </section>
 
-    <!-- INTERACTIVE PHILANTHROPY IMPACT CALCULATOR -->
-
     <!-- GOVERNANCE & LEADERSHIP -->
     <section id="governance" class="py-24 bg-slate-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -848,164 +829,6 @@
         </div>
       </div>
     </section>
-
-    <!-- INTERNATIONAL FOOTPRINT -->
-    <!--     <section class="py-24 bg-white border-t border-slate-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span
-            class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
-            >International Footprint</span
-          >
-          <h2
-            class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mt-2"
-          >
-            Our Regional Operations
-          </h2>
-          <p class="text-slate-600 mt-4">
-            Connecting grassroots innovators to international institutional
-            networks.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="flex items-center gap-3 mb-4">
-              <i data-lucide="map-pin" class="w-5 h-5 text-teal-600"></i>
-              <h3 class="font-serif text-lg font-bold text-slate-900">
-                Nigeria Hub
-              </h3>
-            </div>
-            <div class="text-xs font-semibold text-teal-600 mb-2">
-              Port Harcourt, Nigeria
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              Primary innovation desk for the Betty Nwoks Prize, digital
-              literacy bootcamps, and civic advocacy hubs.
-            </p>
-          </div>
-
-          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="flex items-center gap-3 mb-4">
-              <i data-lucide="map-pin" class="w-5 h-5 text-teal-600"></i>
-              <h3 class="font-serif text-lg font-bold text-slate-900">
-                East Africa Desk
-              </h3>
-            </div>
-            <div class="text-xs font-semibold text-teal-600 mb-2">
-              Nairobi, Kenya
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              Focusing on agritech ventures, climate action leadership, and
-              youth policy acceleration.
-            </p>
-          </div>
-
-          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="flex items-center gap-3 mb-4">
-              <i data-lucide="globe" class="w-5 h-5 text-teal-600"></i>
-              <h3 class="font-serif text-lg font-bold text-slate-900">
-                Diaspora & Global
-              </h3>
-            </div>
-            <div class="text-xs font-semibold text-teal-600 mb-2">
-              North America & Europe
-            </div>
-            <p class="text-slate-600 text-sm leading-relaxed">
-              Executive advisory network, global donor stewardship, and mentor
-              exchanges.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- GLOBAL INQUIRIES SECRETARIAT FORM -->
-    <!--     <section id="inquiries" class="py-24 bg-slate-100">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-200/80"
-        >
-          <div class="text-center mb-8">
-            <span
-              class="text-xs font-semibold tracking-widest text-teal-600 uppercase"
-              >Global Inquiries</span
-            >
-            <h2 class="font-serif text-3xl font-bold text-slate-900 mt-2">
-              Connect With Our Secretariat
-            </h2>
-            <p class="text-slate-600 text-sm mt-2">
-              Reach out for institutional partnerships, fellowship details, or
-              media inquiries.
-            </p>
-          </div>
-
-          <form onsubmit="handleFormSubmit(event)" class="space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label
-                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
-                  >Full Name *</label
-                >
-                <input
-                  type="text"
-                  placeholder="Dr. Sarah Jenkins"
-                  required
-                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm"
-                />
-              </div>
-              <div>
-                <label
-                  class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
-                  >Email Address *</label
-                >
-                <input
-                  type="email"
-                  placeholder="s.jenkins@organization.org"
-                  required
-                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
-                >Inquiry Type</label
-              >
-              <select
-                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
-              >
-                <option>Institutional Partnership</option>
-                <option>Betty Nwoks Prize Inquiry</option>
-                <option>Fellowship Application Question</option>
-                <option>Media & Governance</option>
-              </select>
-            </div>
-
-            <div>
-              <label
-                class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
-                >Message *</label
-              >
-              <textarea
-                rows="4"
-                placeholder="How can we collaborate or support your application?"
-                required
-                class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full py-4 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl transition-colors"
-            >
-              Submit Inquiry
-            </button>
-          </form>
-        </div>
-      </div>
-    </section> -->
 
     <!-- INTERNATIONAL FOOTPRINT & GLOBAL INQUIRIES -->
     <section id="inquiries" class="py-24 bg-white border-t border-slate-200/80">
@@ -1164,7 +987,13 @@
               </p>
             </div>
 
-            <form onsubmit="handleFormSubmit(event)" class="space-y-6">
+            <form
+              id="inquiryForm"
+              action="https://docs.google.com/forms/d/e/1FAIpQLScQttI1KR2Q13F8nNzHfNv1opAWKelOQquVL1wrm8NsKM9ZIQ/formResponse"
+              method="POST"
+              target="hidden_iframe"
+              class="space-y-6"
+            >
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -1174,6 +1003,7 @@
                   </label>
                   <input
                     type="text"
+                    name="entry.1376193422"
                     placeholder="Your full name"
                     required
                     class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
@@ -1188,6 +1018,7 @@
                   </label>
                   <input
                     type="email"
+                    name="entry.974296105"
                     placeholder="Your email address"
                     required
                     class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
@@ -1202,14 +1033,26 @@
                   Inquiry Type
                 </label>
                 <select
+                  name="entry.1332582855"
+                  required
                   class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm bg-white"
                 >
-                  <option>Institutional Partnership</option>
-                  <option>Betty Nwoks Prize Inquiry</option>
-                  <option>Fellowship Application Question</option>
-                  <option>Media & Communications</option>
-                  <option>Donations & Support</option>
-                  <option>General Inquiry</option>
+                  <option value="Institutional Partnership">
+                    Institutional Partnership
+                  </option>
+                  <option value="Betty Nwoks Prize Inquiry">
+                    Betty Nwoks Prize Inquiry
+                  </option>
+                  <option value="Fellowship Application Question">
+                    Fellowship Application Question
+                  </option>
+                  <option value="Media & Communications">
+                    Media & Communications
+                  </option>
+                  <option value="Donations & Support">
+                    Donations & Support
+                  </option>
+                  <option value="General Inquiry">General Inquiry</option>
                 </select>
               </div>
 
@@ -1220,6 +1063,7 @@
                   Message *
                 </label>
                 <textarea
+                  name="entry.5334123"
                   rows="4"
                   placeholder="How can we collaborate or support your inquiry?"
                   required
@@ -1228,12 +1072,25 @@
               </div>
 
               <button
+                id="inquirySubmit"
                 type="submit"
                 class="w-full py-4 bg-slate-900 hover:bg-teal-700 text-white font-bold rounded-xl transition-colors"
               >
                 Submit Inquiry
               </button>
+
+              <p
+                id="inquiryStatus"
+                class="hidden text-sm text-center"
+                role="status"
+              ></p>
             </form>
+
+            <iframe
+              name="hidden_iframe"
+              id="hidden_iframe"
+              class="hidden"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -1266,7 +1123,7 @@
               registered non-governmental organization dedicated to empowering
               visionary social leaders, funding high-impact ventures, and
               driving sustainable civic progress across emerging economies. It
-              is registered in Nigeria with the coutries CAC.
+              is registered in Nigeria with the countries CAC.
             </p>
           </div>
           <div>
@@ -1276,11 +1133,6 @@
               Quick Links
             </h4>
             <ul class="space-y-2 text-sm">
-              <!--        <li>
-                <a href="#about" class="hover:text-white transition-colors"
-                  >About Us</a
-                >
-              </li> -->
               <li>
                 <a href="#prize" class="hover:text-white transition-colors"
                   >Betty Nwoks Prize</a
@@ -1340,6 +1192,21 @@
       // Initialize Lucide Icons
       lucide.createIcons();
 
+      // Mobile Menu Toggle Script
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+        });
+      });
+
       // Video Player Controls
       const video = document.getElementById("heroVideo");
       function toggleMute() {
@@ -1370,27 +1237,38 @@
         lucide.createIcons();
       }
 
-      // Impact Calculator Slider Logic
-      const slider = document.getElementById("impactSlider");
-      slider.addEventListener("input", function () {
-        const val = parseInt(this.value);
-        document.getElementById("sliderValue").innerText = `$${val} / month`;
-        document.getElementById("fellowsCount").innerText =
-          `${Math.round(val / 25)} Fellows`;
-        document.getElementById("grantCount").innerText =
-          `${Math.floor(val / 100)} Micro-Grant${Math.floor(val / 100) > 1 ? "s" : ""}`;
-        document.getElementById("mentorshipCount").innerText =
-          `${val * 1.2} Hours`;
+      // Inquiry Form Submission Logic via Hidden Iframe
+      const inquiryForm = document.getElementById("inquiryForm");
+      const inquiryStatus = document.getElementById("inquiryStatus");
+      const inquirySubmit = document.getElementById("inquirySubmit");
+      const inquiryFrame = document.getElementById("hidden_iframe");
+
+      let inquirySubmitted = false;
+
+      inquiryForm.addEventListener("submit", function () {
+        inquirySubmitted = true;
+        inquirySubmit.disabled = true;
+        inquirySubmit.textContent = "Submitting...";
+
+        inquiryStatus.className = "text-sm text-center text-slate-600";
+        inquiryStatus.textContent = "Please wait while we submit your inquiry.";
+        inquiryStatus.classList.remove("hidden");
       });
 
-      // Form Submit Handler
-      function handleFormSubmit(e) {
-        e.preventDefault();
-        alert(
-          "Thank you! Your inquiry has been submitted to The Drive Foundation Secretariat.",
-        );
-        e.target.reset();
-      }
+      inquiryFrame.addEventListener("load", function () {
+        if (!inquirySubmitted) return;
+
+        inquirySubmitted = false;
+        inquiryForm.reset();
+
+        inquirySubmit.disabled = false;
+        inquirySubmit.textContent = "Submit Inquiry";
+
+        inquiryStatus.className =
+          "text-sm text-center text-teal-700 font-semibold";
+        inquiryStatus.textContent =
+          "Thank you! Your inquiry has been submitted successfully.";
+      });
     </script>
   </body>
 </html>
